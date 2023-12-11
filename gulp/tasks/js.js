@@ -12,7 +12,7 @@ export const js = () => {
         },
           optimization: {
           minimizer: [
-            new TerserPlugin() // Додали TerserPlugin для мініфікації
+            new TerserPlugin()
           ],
         },
         plugins: [
