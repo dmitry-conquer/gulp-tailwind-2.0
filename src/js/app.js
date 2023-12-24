@@ -1,6 +1,5 @@
 
 // import { initSpoiler, initDdropdown } from './modules/spoilers.js';
-// import { initTabs } from './modules/tabs.js';
 // import { initSliders } from './modules/sliders.js';
 // import { initHeader } from './modules/header.js';
 // import { useDynamicAdapt } from './modules/dynamicAdapt.js';
