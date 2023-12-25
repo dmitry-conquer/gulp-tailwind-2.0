@@ -10,6 +10,22 @@ export const js = () => {
         output: {
           filename: "app.min.js",
         },
+        module: {
+          rules: [
+            {
+              test: /\.(?:js|mjs|cjs)$/,
+              exclude: /node_modules/,
+              use: {
+                loader: 'babel-loader',
+                options: {
+                  presets: [
+                    ['@babel/preset-env', { targets: "defaults" }]
+                  ]
+                }
+              }
+            }
+          ]
+        },
           optimization: {
           minimizer: [
             new TerserPlugin()
