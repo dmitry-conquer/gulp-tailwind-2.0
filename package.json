@@ -6,11 +6,7 @@
   "main": "script.js",
   "scripts": {
     "dev": "gulp",
-    "build": "gulp build --build",
-    "zip": "gulp deployZIP --build",
-    "ftp": "gulp deployFTP --build",
-    "lint": "eslint ./src",
-    "lint:fix": "eslint ./src --fix"
+    "build": "gulp build --build"
   },
   "author": "Conquer",
   "license": "ISC",

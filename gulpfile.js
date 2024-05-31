@@ -20,9 +20,6 @@ import { js } from './gulp/tasks/js.js';
 import { img } from './gulp/tasks/img.js';
 import { spritesGen } from './gulp/tasks/sprites-gen.js';
 import { fonts } from './gulp/tasks/fonts.js';
-// import { json } from "./gulp/tasks/json.js";
-import { zip } from './gulp/tasks/zip.js';
-import { ftp } from './gulp/tasks/ftp.js';
 
 // file change watcher
 function watcher() {
@@ -32,7 +29,6 @@ function watcher() {
    gulp.watch(path.watch.js, js);
    gulp.watch(path.watch.images, img);
    gulp.watch(path.watch.svg, spritesGen);
-   // gulp.watch(path.watch.json, json);
 }
 
 // main tasks
@@ -44,15 +40,11 @@ const spritesGeneration = spritesGen;
 // building scenarios for executing tasks
 const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher, server));
 const build = gulp.series(reset, mainTasks);
-const deployZIP = gulp.series(reset, mainTasks, zip);
-const deployFTP = gulp.series(reset, mainTasks, ftp);
 
 // scenarios
 export { spritesGeneration };
 export { dev };
 export { build };
-export { deployZIP };
-export { deployFTP };
 
 // default Script
 gulp.task('default', dev);
